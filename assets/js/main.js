@@ -48,55 +48,6 @@ common(close,open,'slide-out');//when i click on (close) = i want you to display
 
 
 
-
-
-//function for sliding images
-var index = 0;
-const slides = document.querySelectorAll('.adv-img');
-
-
-function changeSlide(){
-
-  if(index < 0){
-    index = slides.length-1;
-  }
-  
-  if(index > slides.length-1){
-    index = 0;
-  }
-  
-  for(let i=0;i<slides.length;i++){
-    slides[i].style.display = "none";
-  }
-  
-  slides[index].style.display= "block";
-  
-  index++;
-  
-  setTimeout(changeSlide,5000);
-  
-}
-
-changeSlide();
-
-
-
-/* DARK AND LIGHT THEME  */
-
-const themeToggle = document.getElementById("theme-toggle");
-
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light-theme");
-
-  // change theme toggle button icon
-  if (document.body.classList.contains("light-theme")) {
-    themeToggle.classList.replace("bxs-moon", "bxs-sun");
-  } else {
-    themeToggle.classList.replace("bxs-sun", "bxs-moon");
-  }
-});
-
-
 /* SCROLL TO TOP FUNCTION */
 
 
@@ -121,3 +72,26 @@ toUP.addEventListener("click", () => {
 document.addEventListener("scroll", (e) =>{
 scrollFunction();
 })
+
+
+
+/* sSEE MORE / SEE LESS TO TOP FUNCTION */
+
+
+  let dots = document.getElementById("dots");
+  let moreText = document.getElementById("more");
+  let btnText = document.getElementById("myBtn");
+  
+  btnText.addEventListener('click', () => { 
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "SEE MORE"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "SEE LESS"; 
+    moreText.style.display = "inline";
+  }
+})
+
+

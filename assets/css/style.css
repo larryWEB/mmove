@@ -1,4 +1,6 @@
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;700&family=Kavoon&family=Lobster&family=Orbitron:wght@400;500;900&display=swap');
 
 /*
@@ -30,6 +32,25 @@ font-family: 'Orbitron', sans-serif; */
 background-color:  var(--color-bg);
 transition: 0.4s;
 }
+
+.btncard{
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+
+#myBtn{
+	line-height:3;
+width:200px;
+background-color:var(--color-purple);
+font-size:13px;
+color: var(--color-white);
+border:none;
+border-radius:5px;
+}
+
+
 
 /* change theme colors */
 body.light-theme {
@@ -305,8 +326,16 @@ color:var(--color-white);
 position: relative;
 padding:20px;
 		background-color:var(--color-bg);
-ckground-image: url('/assets/images/pattern-2.png') !important;
+padding-top:50px;
 	}
+
+
+
+
+	.services h1{
+		color:var(--color-purple);
+		padding-bottom:10px;
+			}
 
 .service-card-mother{
 	 display:flex;
